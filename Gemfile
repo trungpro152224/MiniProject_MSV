@@ -28,6 +28,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
 gem 'haml', '~> 5.0', '>= 5.0.4'
 
+
 group :development, :test do
 
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
