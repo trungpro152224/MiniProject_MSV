@@ -1,4 +1,6 @@
 = link_to "New", new_post_path
+= link_to "Log out", destroy_user_session_path, method: :delete
+= link_to "Log in", new_user_session_path
 - @posts.each do |post| 
 	%h2= link_to post.title, post
 

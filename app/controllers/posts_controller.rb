@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
 
 	def new 
-		@post = Post.new 
+		@post = current_user.posts.build 
 
 	end 
 
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
 
 
 	def create 
-		@post = Post.new (post_params)
+		@post = current_user.posts.build(post_params)
 		if
 			@post.save 
 			redirect_to @post,
@@ -48,7 +48,7 @@ class PostsController < ApplicationController
 
 	def destroy
 		@post.destroy 
-		flash[:success] = "xoa thanh cong"
+		flash[:success] = "Successfully destroy post"
 		redirect_to root_path
 	end 
 
