@@ -22,6 +22,8 @@
 			%span.glyphicon.glyphicon-thumbs-down
 				=@post.get_downvotes.size
 		%br/
+		%h2= pluralize(@comments.count, "comment")
+		
 		%br/
 		.btn.btn-default= link_to "Back", root_path
 		.btn.btn-default= link_to "Edit", edit_post_path

@@ -28,3 +28,17 @@
 	opacity: 1;
 	transition: 1s;
 }
+
+
+ #search.form-control {
+	width: 75%;
+	margin-top: 6px;
+	transition: 1s;
+
+}
+
+ #search.form-control:hover {
+	width: 100%;
+	margin-top: 6px;
+	transition: 1s;
+	}

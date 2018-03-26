@@ -9,12 +9,10 @@
 		%nav.navbar.navbar-inverse
 			.container
 				.navbar-brand= link_to "Mini Project - MSV", root_path
-				
-				/ .col-md-2
-				/ .nav.navbar-nav.navbar-left
-				/ 	.form-group
-				/ 		%input{type: "text", class: "form-control", placeholder: "Search"}
-				/ 		%button{type: "submit", class: "btn btn-default"}Submit
+
+				.col-md-4.col-md-offset-2
+					=form_tag posts_path do 
+						=text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search"
 
 				- if user_signed_in? 
 					%ul.nav.navbar-nav.navbar-right
