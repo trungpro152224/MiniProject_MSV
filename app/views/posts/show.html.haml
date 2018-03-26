@@ -5,6 +5,6 @@ Create by:
 = @post.user.email
 %br/
 
-= link_to "Back", root_path 
-= link_to "Edit", edit_post_path
-= link_to "Destroy", post_path, method: :delete, data: {confirm: 'Are you sure?'}
+.btn.btn-default= link_to "Back", root_path
+.btn.btn-default= link_to "Edit", edit_post_path
+.btn.btn-default= link_to "Destroy", post_path, method: :delete, data: {confirm: 'Are you sure?'}
