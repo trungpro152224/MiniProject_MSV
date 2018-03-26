@@ -1,0 +1,20 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#post-masonry-container {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.box-masonry {
+	margin: 5px;
+	background-color: #66ffff;
+	width: 300px;
+	height: 350px;
+}
+
+.box-image-masonry {
+	width: 100%;
+}
+
