@@ -18,3 +18,13 @@
 	width: 100%;
 }
 
+
+.box-img-masonry {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.box-img-masonry:hover {
+	opacity: 1;
+	transition: 1s;
+}
