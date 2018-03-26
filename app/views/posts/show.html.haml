@@ -1,5 +1,6 @@
 
 .panel.panel-default
+
 	.panel-heading
 		= image_tag @post.image.url(:medium), :class => "img-show"
 	.panel-body
@@ -7,6 +8,8 @@
 		%p= @post.description 
 		%p
 	.panel-footer
+
+		=render "comments/comment"
 		%strong Created by:
 		%em= @post.user.email
 		%br/

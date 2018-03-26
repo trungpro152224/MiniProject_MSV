@@ -1,0 +1,9 @@
+
+
+= simple_form_for([@post, @post.comments.build]) do |f| 
+
+	.form-group
+		= f.input :content, input_html: { class: 'form-control'}
+
+	.form-group
+		= f.submit 'create comment', :class => "btn btn-warning"

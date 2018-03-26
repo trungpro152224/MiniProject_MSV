@@ -1,0 +1,13 @@
+- @comments.each do |comment|
+	.alert.alert-success
+		= comment.content 
+		%br/
+		%br/
+		%strong Author: 
+		= comment.user.email
+		%br/
+		- if current_user == comment.user
+			= link_to 'Delete comment', [comment.post,comment], method: :delete, data: {confirm: "Are you sure?"}
+			= link_to 'Update comment', edit_post_comment_path(comment.post, comment)
+
+= render 'comments/form'
