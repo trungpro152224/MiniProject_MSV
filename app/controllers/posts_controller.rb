@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
-	before_action :find_post, only: [:show, :edit, :update, :destroy]
-
+	before_action :find_post, only: [:show, :edit, :update, :downvote, :destroy, :upvote]
+	before_action :authenticate_user!, except: [:index, :show]
 
 	def index 
 		@posts = Post.all.order('created_at DESC')
@@ -51,6 +51,17 @@ class PostsController < ApplicationController
 		flash[:success] = "Successfully destroy post"
 		redirect_to root_path
 	end 
+
+
+	def upvote 
+		@post.upvote_from current_user
+		redirect_to posts_path
+	end
+
+	def downvote 
+		@post.downvote_from current_user
+		redirect_to posts_path
+	end
 
 	private 
 

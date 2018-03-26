@@ -40,6 +40,9 @@ gem 'paperclip', '~> 6.0'
 
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
+gem 'acts_as_votable', '~> 0.11.1'
+
+
 group :development, :test do
 
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

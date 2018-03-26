@@ -22,7 +22,15 @@ body {
 	background-color: #dddddd;
 }
 
+
+.btn.btn-default a:hover {
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
 .panel-body {
+	text-align: center;
 	text-decoration: none;
 }
 
@@ -42,6 +50,7 @@ body {
 .panel-footer {
 	text-align: center;
 }
+
 
 .img-show {
     margin: auto;

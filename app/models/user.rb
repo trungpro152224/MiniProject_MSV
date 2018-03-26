@@ -1,10 +1,12 @@
 class User < ApplicationRecord
   
+  acts_as_voter
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessor :username
-  validates :username, presence: true
+
 
   has_many :posts
 
