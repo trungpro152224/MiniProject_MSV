@@ -1,12 +1,16 @@
 
-= image_tag @post.image.url(:medium)
-%h1= @post.title 
-%p= @post.description 
-%p
-Create by:
-= @post.user.email
-%br/
-
-.btn.btn-default= link_to "Back", root_path
-.btn.btn-default= link_to "Edit", edit_post_path
-.btn.btn-default= link_to "Destroy", post_path, method: :delete, data: {confirm: 'Are you sure?'}
+.panel.panel-default
+	.panel-heading
+		= image_tag @post.image.url(:medium), :class => "img-show"
+	.panel-body
+		%h1= @post.title 
+		%p= @post.description 
+		%p
+	.panel-footer
+		%strong Created by:
+		%em= @post.user.email
+		%br/
+		%br/
+		.btn.btn-default= link_to "Back", root_path
+		.btn.btn-default= link_to "Edit", edit_post_path
+		.btn.btn-default= link_to "Destroy", post_path, method: :delete, data: {confirm: 'Are you sure?'}
