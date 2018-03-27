@@ -27,3 +27,5 @@
 							%p
 							Created at: 
 							= post.created_at.strftime("%Y-%m-%d")
+
+		= paginate @posts, theme: 'twitter-bootstrap-3'

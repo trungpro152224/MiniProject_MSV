@@ -7,9 +7,9 @@ class PostsController < ApplicationController
 		# @posts = Post.all.order('created_at DESC')
 		# @posts = Post.where(["name LIKE ?", "%#{params[:search]}%"])
 		 if params[:search]
-      @posts = Post.search(params[:search]).order("created_at DESC")
+      @posts = Post.search(params[:search]).order("created_at DESC").page(params[:page]).per(6)
     else
-      @posts = Post.all.order('created_at DESC')
+      @posts = Post.all.order('created_at DESC').page(params[:page]).per(6)
     end
 
 	end 

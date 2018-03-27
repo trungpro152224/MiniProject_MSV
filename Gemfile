@@ -42,6 +42,9 @@ gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
 gem 'acts_as_votable', '~> 0.11.1'
 
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
+
+gem 'bootstrap-kaminari-views', '~> 0.0.5'
 
 group :development, :test do
 
@@ -50,6 +53,8 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
 
   gem 'selenium-webdriver'
+
+  gem 'cucumber', '~> 3.1'
 end
 
 group :development do

@@ -7,12 +7,15 @@ class Post < ApplicationRecord
 	has_many :comments, dependent: :destroy 
 
   validates :description,
-  presence: true,
-  allow_blank: true
+  presence: true
 
   validates :title,
   presence: true,
-  allow_blank: true
+  length: { minimum: 5 }
+
+
+  validates :image,
+  presence: true
 
 
 	has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }
