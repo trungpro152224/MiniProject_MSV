@@ -1,7 +1,14 @@
 %html
 	%body
+
+		= form_tag(posts_path, :method => "get", id: "search-form", :class => "form-inline") do 
+			= text_field_tag :search, params[:search], placeholder: "Search Posts", :class => "form-control"
+
+			= submit_tag "Search", class: "btn btn-default"
+
 		#post-masonry-container.transitions-enabled
 			- @posts.each do |post| 
+
 				.box-masonry.panel.panel-default
 					= link_to (image_tag post.image.url(:medium)), post, class: "box-img-masonry"
 					.panel-body

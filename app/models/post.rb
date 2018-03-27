@@ -4,7 +4,7 @@ class Post < ApplicationRecord
 
 	belongs_to :user
 	
-	has_many :comments
+	has_many :comments, dependent: :destroy 
 
   validates :description,
   presence: true,
@@ -17,5 +17,10 @@ class Post < ApplicationRecord
 
 	has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+
+  def self.search(search)
+
+  where("title LIKE ?", "%#{search}%")
+	end
 
 end
