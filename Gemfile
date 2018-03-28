@@ -43,7 +43,7 @@ gem 'acts_as_votable', '~> 0.11.1'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 gem 'bootstrap-kaminari-views', '~> 0.0.5'
-
+gem 'listen', '~> 3.1.5'
 
 group :development, :test do
 
@@ -58,12 +58,12 @@ end
 
 
 group :development do
-  
+
   gem 'sqlite3'
 
   gem 'web-console', '>= 3.3.0'
 
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen', '~> 3.1.5'
 
   gem 'spring'
 
@@ -76,6 +76,7 @@ group :test, :production do
   gem 'rails_12factor'
 
   gem 'pg'
+  
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
